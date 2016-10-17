@@ -3,12 +3,12 @@ angular.module('app')
 
     var items = [];
 
-    function getItemByProduct(product) {
-      return _.find(items, {product: product});
+    function getItemByProductId(id) {
+      return _.find(items, (item) => item.product.id === id);
     }
 
     function add(product, amount) {
-      var itemInCart = getItemByProduct(product);
+      var itemInCart = getItemByProductId(product.id);
       if (itemInCart) {
         itemInCart.amount += amount;
       } else {
