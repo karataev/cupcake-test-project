@@ -24,9 +24,14 @@ angular.module('app')
       items.splice(index, 1);
     }
 
+    function clear() {
+      items = [];
+    }
+
     return {
       add: add,
       remove: remove,
+      clear: clear,
       getItems: () => items
     }
   })
