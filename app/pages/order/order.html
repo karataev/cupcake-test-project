@@ -1,0 +1,12 @@
+<h1>Ваш заказ</h1>
+<ul>
+  <li ng-repeat="item in $ctrl.items">
+    Продукт {{item.product.id}}, количество {{item.amount}}
+  </li>
+</ul>
+<div>
+  <button class="btn btn-success" ng-click="$ctrl.makeOrder()">Оформить заказ</button>
+</div>
+<div class="back-to-products">
+  <a class="btn btn-default" ui-sref="products">Вернуться к выбору продуктов</a>
+</div>

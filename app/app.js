@@ -8,8 +8,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/products',
     template: '<products-page></products-page>'
   };
+  var orderState = {
+    name: 'order',
+    url: '/order',
+    template: '<order-page></order-page>'
+  };
 
   $stateProvider.state(productsState);
+  $stateProvider.state(orderState);
 
   $urlRouterProvider.otherwise('/products');
 });

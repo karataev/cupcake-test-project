@@ -19,8 +19,14 @@ angular.module('app')
       }
     }
 
+    function remove(item) {
+      var index = items.indexOf(item);
+      items.splice(index, 1);
+    }
+
     return {
       add: add,
+      remove: remove,
       getItems: () => items
     }
   })
