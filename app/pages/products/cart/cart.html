@@ -1,14 +1,19 @@
 <div class="bg-info cart-wrap">
   <h1>Корзина</h1>
-  <ul ng-repeat="item in $ctrl.items">
-    <li>
-      Продукт {{item.product.id}}, количество {{item.amount}}
-      <button class="btn btn-default" ng-click="$ctrl.removeItem(item)">Удалить</button>
-    </li>
-  </ul>
-  <a class="btn btn-primary"
-     ui-sref="order"
-     ng-show="$ctrl.items.length > 0">
-    Оформить заказ
-  </a>
+  <div ng-if="$ctrl.items.length > 0">
+    <ul ng-repeat="item in $ctrl.items">
+      <li>
+        Продукт {{item.product.id}}, количество {{item.amount}}
+        <button class="btn btn-default btn-sm" ng-click="$ctrl.removeItem(item)">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </li>
+    </ul>
+    <a class="btn btn-primary" ui-sref="order">
+      Оформить заказ
+    </a>
+  </div>
+  <div ng-if="$ctrl.items.length === 0">
+    Пусто
+  </div>
 </div>

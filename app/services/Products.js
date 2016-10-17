@@ -6,8 +6,8 @@ angular.module('app')
     function fetchAll() {
       return $http.get(url)
         .then(function(res) {
-          // 50 items for this project is enough
-          data = res.data.slice(0, 5);
+          // 10 items for this project is enough
+          data = res.data.slice(0, 10);
           return data;
         })
     }

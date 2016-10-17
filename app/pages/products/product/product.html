@@ -9,6 +9,7 @@
     <div class="details-wrap">
       <div ng-if="!$ctrl.detailedState">
         <button class="btn btn-default" ng-click="$ctrl.showDetails()">
+          <span class="glyphicon glyphicon-zoom-in"></span>
           Подробнее
         </button>
       </div>
@@ -17,13 +18,19 @@
           {{$ctrl.data.title}}
         </div>
         <div>
-          <button class="btn btn-default" ng-click="$ctrl.hideDetails()">Скрыть</button>
+          <button class="btn btn-default" ng-click="$ctrl.hideDetails()">
+            <span class="glyphicon glyphicon-zoom-out"></span>
+            Скрыть
+          </button>
         </div>
       </div>
     </div>
     <form ng-submit="$ctrl.addToCart()" class="form-inline">
       <input type="number" class="form-control input-amount" ng-model="$ctrl.amount" min="1">
-      <button class="btn btn-default">В корзину</button>
+      <button class="btn btn-default">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        В корзину
+      </button>
     </form>
     <!--<pre>{{$ctrl.data | json}}</pre>-->
   </div>
