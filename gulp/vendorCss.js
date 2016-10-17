@@ -6,7 +6,8 @@ var merge = require('merge-stream');
 module.exports = function vendorCss() {
   var cssStream = gulp.src([
     'node_modules/normalize-css/normalize.css',
-    'node_modules/bootstrap/dist/css/bootstrap.css'
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'node_modules/angular-loading-bar/build/loading-bar.css'
   ])
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest(config.styles.dist));

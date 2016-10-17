@@ -1,6 +1,10 @@
 
 angular.module('templates', []);
-var app = angular.module('app', ['templates', 'ui.router']);
+var app = angular.module('app', [
+  'templates',
+  'ui.router',
+  'angular-loading-bar'
+]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   var productsState = {
