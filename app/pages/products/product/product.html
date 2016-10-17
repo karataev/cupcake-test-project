@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Продукт {{$ctrl.data.id}}
+  </div>
+  <div class="panel-body">
+    <div>
+      <img ng-src="{{$ctrl.data.thumbnailUrl}}" alt="">
+    </div>
+    <div class="details-wrap">
+      <div ng-if="!$ctrl.detailedState">
+        <button class="btn btn-default" ng-click="$ctrl.showDetails()">
+          Подробнее
+        </button>
+      </div>
+      <div ng-if="$ctrl.detailedState">
+        <div>
+          {{$ctrl.data.title}}
+        </div>
+        <div>
+          <button class="btn btn-default" ng-click="$ctrl.hideDetails()">Скрыть</button>
+        </div>
+      </div>
+    </div>
+    <form ng-submit="$ctrl.addToCart()" class="form-inline">
+      <input type="number" class="form-control input-amount" ng-model="$ctrl.amount" min="1">
+      <button class="btn btn-default">В корзину</button>
+    </form>
+    <!--<pre>{{$ctrl.data | json}}</pre>-->
+  </div>
+</div>

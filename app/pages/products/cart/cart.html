@@ -1,0 +1,7 @@
+<h1>Корзина</h1>
+<div ng-repeat="item in $ctrl.items">
+  Продукт {{item.product.id}}, количество {{item.amount}}
+</div>
+<form ng-submit="$ctrl.order()">
+  <button class="btn btn-primary" ng-show="$ctrl.items.length > 0">Оформить заказ</button>
+</form>

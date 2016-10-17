@@ -13,6 +13,7 @@
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1",
     "bootstrap": "^3.3.7",
+    "lodash": "^4.16.4",
     "normalize-css": "^2.3.1"
   },
   "devDependencies": {
@@ -29,5 +30,4 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0"
   }
-
 }

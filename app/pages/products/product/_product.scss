@@ -1,0 +1,14 @@
+product {
+  display: block;
+  flex: 0 1 300px;
+  text-align: center;
+
+  .details-wrap {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .input-amount {
+    width: 80px !important;
+  }
+}
